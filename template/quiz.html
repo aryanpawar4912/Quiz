@@ -1,0 +1,27 @@
+{% extends 'home.html' %}
+{% block content %}
+<div class="container mt-5 pt-5 d-flex justify-content-center">
+    <div class="card text-center shadow-lg" style="width: 500px; max-width: 100%;">
+        
+        <!-- Header with Stopwatch + Finish Button -->
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h5 class="text-primary mb-0">
+                Elapsed Time: <span id="stopwatch">00:00</span>
+            </h5>
+            <button class="btn btn-danger btn-sm" onclick="finishQuiz()">Finish Quiz</button>
+        </div>
+
+        <!-- Question Body -->
+        <div class="card-body">
+            <h5 class="card-title mb-4" id="question">Question appears here</h5>
+            <div id="options" class="d-flex flex-column"></div>
+        </div>
+
+        <!-- Footer with Clear and Next Buttons -->
+        <div class="card-footer d-flex justify-content-between">
+            <button class="btn btn-outline-secondary" onclick="clearSelection()">Clear Answer</button>
+            <button class="btn btn-primary" onclick="nextQuestion()">Next Question</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'home.html' %}
+{% block content %}
+<div class="container mt-5 pt-5 d-flex justify-content-center">
+    <div class="card text-center shadow-lg border-0" style="width: 500px; max-width: 100%;">
+        <div class="card-body py-4">
+            <h2 class="mb-3 text-success">
+                <i class="fas fa-trophy"></i> Quiz Completed!
+            </h2>
+
+            {% if score == total %}
+                <p class="fs-5 text-success">🎯 Perfect score! You scored <strong>{{ score }} out of {{ total }}.</strong> </p>
+            {% elif score >= total|divisibleby:2 %}
+                <p class="fs-5 text-warning">👍 Well done! You scored  <strong>{{ score }} out of {{ total }}.</strong></p>
+            {% else %}
+                <p class="fs-5 text-danger">🤔 You scored  <strong>{{ score }} out of {{ total }}.</strong>  Try again!</p>
+            {% endif %}
+
+            <p class="fs-6 text-muted">
+                ⏱️ Time Taken: <strong>{{ duration }}</strong>
+            </p>
+
+            <div class="d-flex justify-content-center mt-4 gap-3 flex-wrap">
+                <a href="{% url 'quiz' %}" class="btn btn-outline-primary px-4">
+                    <i class="fas fa-redo-alt"></i> Retake Quiz
+                </a>
+                <a href="{% url 'history' %}" class="btn btn-outline-dark px-4">
+                    <i class="fas fa-list-ul"></i> View Past Results
+                </a>
+                <a href="{% url 'home' %}" class="btn btn-outline-secondary px-4">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
