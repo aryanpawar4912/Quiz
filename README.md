@@ -82,33 +82,36 @@ System calculates score
 Result is displayed
 Attempt is stored in database
 User can view history anytime
+
 📊 Key Feature — Quiz History
 
 The system stores all quiz attempts:
-
 Score achieved
 Total questions
 Date & time
 User name
 
 This allows users to:
-
 Track improvement
 Analyze performance
 Compare past attempts
+
 🎯 Core Pages
 Home Page → Start quiz / navigate
 Quiz Page → Answer questions
 Result Page → View score
 History Page → View past attempts
+
 📱 UI Design Principles
 Mobile-first design
 Bootstrap responsive layout
 Large clickable buttons
 Simple navigation flow
 Minimal typing (tap-based interaction)
+
 🧪 Example Flow
 Home → Quiz → Result → History
+
 🛠️ Installation & Setup
 1. Clone Repository
 git clone https://github.com/aryanpawar_4912/Quiz.git
@@ -122,6 +125,7 @@ pip install django
 python manage.py runserver
 5. Open in Browser
 http://127.0.0.1:8000/
+
 🌟 Future Improvements
 🔐 User authentication system
 🏆 Leaderboard system
